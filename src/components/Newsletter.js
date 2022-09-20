@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 
-export const Newsletter = ({ subscribe, status, message }) => {
+export const Newsletter = ({ status, message, onValidated }) => {
 
   const [email, setEmail] = useState('');
 
@@ -21,7 +21,7 @@ export const Newsletter = ({ subscribe, status, message }) => {
   const clearFields = () => {
     setEmail('');
   }
-  
+
   return (
     <Col lg={12}>
        <div className="newsletter-bx wow slideInUp">
